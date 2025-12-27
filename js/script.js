@@ -35,7 +35,6 @@
     $(window).on("resize", onScrollOrResize);
   })();
 
-  // OFFCANVAS → DESACTIVAR DIFFERENCE
   (function () {
     const $offcanvas = $("#offcanvasNavbar");
     if (!$offcanvas.length) return;
@@ -54,9 +53,9 @@
 
 
 // PELOTEO HOME
+// footer
 $(function () {
 
-  /* ---------- ALTURA HERO = 100vh - footer ---------- */
   const $footer = $("footer");
 
   function setHeroHeight() {
@@ -70,7 +69,7 @@ $(function () {
   setHeroHeight();
   $(window).on("resize", setHeroHeight);
 
-  /* ---------- LOOP HORIZONTAL PELOTEO ---------- */
+// animacion peloteo palabra
   const $loop = $("#heroLoop");
   if (!$loop.length) return;
 
