@@ -1,0 +1,184 @@
+@font-face {
+    font-family:"roc-grotesk-regular";
+    src: url('./fonts/Kostic\ -\ Roc\ Grotesk\ Regular.otf') format('opentype');
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+@font-face {
+    font-family:"roc-grotesk-bold";
+    src: url('./fonts/Kostic\ -\ Roc\ Grotesk\ Bold.otf') format('opentype');
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+@font-face {
+    font-family:"roc-grotesk-wide-medium";
+    src: url('./fonts/Kostic\ -\ Roc\ Grotesk\ Wide\ Medium.otf') format('opentype');
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+@font-face {
+    font-family:"roc-grotesk-extrawide-extrabold";
+    src: url('./fonts/Kostic\ -\ Roc\ Grotesk\ ExtraWide\ ExtraBold.otf') format('opentype');
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    
+    --font-family-regular: 'roc-grotesk-regular', sans-serif;
+    --font-family-bold: 'roc-grotesk-bold', sans-serif;
+    --font-family-wide-medium: 'roc-grotesk-wide-medium', sans-serif;
+    --font-family-extrawide-extrabold: 'roc-grotesk-extrawide-extrabold', sans-serif;
+
+
+    --green: #AEA349;
+    --red: #EF3E24;
+    --white: #FFFBF5;
+    --black: black;
+
+    --image-width: 100%;
+    --image-height: 100%;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--red) !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/* MENU
+---------------------------------------------------------------------------------------------------------------- */
+.navbar-toggler.custom-toggle {
+  background-color: transparent;
+  border: none !important;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 3rem;
+  height: 2.4rem;
+  padding: 0;
+}
+
+.navbar-toggler.custom-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler.custom-toggle .toggle-line {
+  display: block;
+  width: 60%;
+  height: 0.3rem;
+  background-color: currentColor;
+  border-radius: 999px;
+}
+
+.navbar-toggler.custom-toggle .toggle-line + .toggle-line {
+  margin-top: 0.35rem;
+}
+
+.offcanvas {
+  background-color: var(--white) !important;
+  height: 100vh !important;
+}
+
+.offcanvas-header,
+.offcanvas-body {
+  background: transparent !important;
+}
+
+.offcanvas-body {
+  justify-content: center !important;
+}
+
+.offcanvas .navbar-nav .nav-link h5 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  border-bottom: none;
+}
+
+.navbar-blur {
+  mix-blend-mode: difference;
+  color: #ffffff;
+}
+
+.navbar-blur .nav-link,
+.navbar-blur .nav-link h5 {
+  color: inherit !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.navbar-blur.navbar-on-header {
+  mix-blend-mode: normal;
+  color: #000000;
+}
+
+.navbar-blur.navbar-on-header .nav-link,
+.navbar-blur.navbar-on-header .nav-link h5 {
+  color: #000000 !important;
+}
+
+.navbar-blur.navbar-on-header .navbar-toggler.custom-toggle {
+  color: #000000;
+}
+.white{
+  color: #ffffff !important;
+}  
+
+
+
+@media screen and (max-width: 768px) {
+
+  .offcanvas-header {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start !important;
+  }
+
+  .offcanvas .navbar-nav .nav-link h5 {
+    color: var(--black) !important;
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 1rem;
+  }
+
+  .navbar-blur {
+    mix-blend-mode: normal !important;
+  }
+
+  .menu-blur {
+    position: absolute;
+    top: 40vh;
+    text-align: center;
+  }
+
+}
+
