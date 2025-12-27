@@ -1,6 +1,3 @@
-
-
-
   // MENU BLEND
   (function () {
     const $navbar = $(".navbar-blur");
@@ -56,5 +53,37 @@
 
 
 
+// PELOTEO HOME
+$(function () {
 
+  /* ---------- ALTURA HERO = 100vh - footer ---------- */
+  const $footer = $("footer");
+
+  function setHeroHeight() {
+    const footerHeight = $footer.outerHeight();
+    document.documentElement.style.setProperty(
+      "--footer-height",
+      `${footerHeight}px`
+    );
+  }
+
+  setHeroHeight();
+  $(window).on("resize", setHeroHeight);
+
+  /* ---------- LOOP HORIZONTAL PELOTEO ---------- */
+  const $loop = $("#heroLoop");
+  if (!$loop.length) return;
+
+  const loopWidth = $loop.outerWidth();
+
+  gsap.set($loop, { x: 0 });
+
+  gsap.to($loop, {
+    x: -loopWidth / 2,
+    duration: 60,     // lento, editorial
+    ease: "none",
+    repeat: -1
+  });
+
+});
 
