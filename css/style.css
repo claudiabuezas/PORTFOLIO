@@ -178,16 +178,11 @@ border: none !important;
 
 
 /* WORK */
-/* =========================
-   ARCHIVE – STYLEFRAME MODEL
-   ========================= */
 
 .archive {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: #f1f1ef;
   overflow: hidden;
 }
 
@@ -198,13 +193,10 @@ border: none !important;
   perspective: 1200px;
 }
 
-/* LISTA 3D (EL TRUCO) */
 .archive-stack {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-  align-items: center;
-
   transform-style: preserve-3d;
   transform: rotateX(70deg) rotateZ(40deg);
 
@@ -219,7 +211,6 @@ border: none !important;
 .archive-card {
   width: 55vw;
   height: 38vh;
-
   margin-top: -10vh;
   margin-bottom: -10vh;
 
