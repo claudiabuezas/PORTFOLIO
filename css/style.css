@@ -180,7 +180,7 @@ border: none !important;
 /* WORK */
 
 .archive {
-  height: 100vh;
+  height: calc(100vh - var(--footer-height, 0px));
   display: flex;
   justify-content: center;
   overflow: hidden;
