@@ -86,3 +86,21 @@ $(function () {
 
 });
 
+
+
+
+
+// WORK
+$(function () {
+  const $cards = $(".archive-card");
+
+  $cards.on("mouseenter", function () {
+    $cards.removeClass("is-active");
+    $(this).addClass("is-active");
+  });
+
+  $cards.on("mouseleave", function () {
+    $(this).removeClass("is-active");
+  });
+});
+

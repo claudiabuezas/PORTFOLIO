@@ -175,6 +175,96 @@ border: none !important;
 
 
 
+
+
+/* WORK */
+/* =========================
+   ARCHIVE – STYLEFRAME MODEL
+   ========================= */
+
+.archive {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1ef;
+  overflow: hidden;
+}
+
+/* ESCENA */
+.archive-scene {
+  width: 70vw;
+  height: 70vh;
+  perspective: 1200px;
+}
+
+/* LISTA 3D (EL TRUCO) */
+.archive-stack {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) rotateZ(40deg);
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  will-change: transform;
+}
+
+/* TARJETAS */
+.archive-card {
+  width: 55vw;
+  height: 38vh;
+
+  margin-top: -10vh;
+  margin-bottom: -10vh;
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+
+  transform-style: preserve-3d;
+  transform: rotateX(-90deg);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+
+  will-change: transform;
+}
+
+/* HOVER – SOLO SE ELEVA */
+.archive-card:hover {
+  transform: rotateX(-90deg) translateY(-6vh);
+  z-index: 10;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+}
+
+.archive-card.is-active {
+  transform: rotateX(-90deg) translateY(-6vh);
+  z-index: 10;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* FOOTER */
 footer {
   padding: 0.5rem;
