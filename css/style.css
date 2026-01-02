@@ -72,7 +72,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 h1 {
@@ -92,6 +92,7 @@ h2 {
 .peloteo {
   font-family: var(--font-family-wide-medium) !important;
   margin-left: 1rem !important;
+  color: var(--black) !important;
 }
 
 .navbar-toggler {
