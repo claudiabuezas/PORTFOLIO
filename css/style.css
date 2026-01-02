@@ -100,7 +100,7 @@ border: none !important;
 }
 
 .offcanvas {
-  background-color: var(--white) !important;
+  background-color: var(--red) !important;
   height: 100vh !important;
 }
 
@@ -113,6 +113,11 @@ border: none !important;
   justify-content: center !important;
 }
 
+/* .link-aspecto {
+  padding: 2rem 5rem 1rem 5rem;
+  border: solid !important;
+} */
+
 .offcanvas .navbar-nav .nav-link h2 {
   margin: 0.5rem 0;
   font-size: 1.1rem;
@@ -121,6 +126,7 @@ border: none !important;
   color: #ffffff !important;
   border-bottom: none;
 }
+
 
 .navbar-blur {
   mix-blend-mode: difference;
@@ -350,7 +356,7 @@ body.work footer {
 
 
 
-@media screen and (max-width: 571px) {
+@media screen and (max-width: 768px) {
 
   .offcanvas-header {
     flex-direction: column;
