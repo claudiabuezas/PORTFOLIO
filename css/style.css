@@ -223,14 +223,27 @@ border: none !important;
 
 /* WORK */
 
-.archive {
+body.work {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   overflow: hidden;
 }
 
-/* ESCENA */
+body.work > header {
+  flex: 1;
+  min-height: 0; /* CLAVE */
+  display: flex;
+}
+
+body.work .archive {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+
 .archive-scene {
   width: 70vw;
   height: 70vh;
@@ -251,7 +264,6 @@ border: none !important;
   will-change: transform;
 }
 
-/* TARJETAS */
 .archive-card {
   width: 55vw;
   height: 38vh;
@@ -274,7 +286,6 @@ border: none !important;
   will-change: transform;
 }
 
-/* HOVER – SOLO SE ELEVA */
 .archive-card:hover {
   transform: rotateX(-90deg) translateY(-6vh);
   z-index: 10;
@@ -286,6 +297,9 @@ border: none !important;
   z-index: 10;
   box-shadow: 0 40px 80px rgba(0,0,0,0.35);
 }
+
+
+
 
 
 
@@ -312,6 +326,14 @@ footer div {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+body.work footer {
+  padding: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 

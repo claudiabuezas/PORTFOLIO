@@ -316,34 +316,5 @@ $(function () {
 });
 
 
-// CURSOR BALL
-const ball = document.querySelector(".cursor-ball");
 
-// setters ultra rápidos (GSAP controla el transform)
-const setX = gsap.quickSetter(ball, "x", "px");
-const setY = gsap.quickSetter(ball, "y", "px");
-
-// animadores suaves
-const moveX = gsap.quickTo(ball, "x", {
-  duration: 0.3,
-  ease: "power3.out"
-});
-const moveY = gsap.quickTo(ball, "y", {
-  duration: 0.3,
-  ease: "power3.out"
-});
-
-// posición inicial (evita salto a 0,0)
-let initialized = false;
-
-window.addEventListener("mousemove", (e) => {
-  if (!initialized) {
-    setX(e.clientX);
-    setY(e.clientY);
-    initialized = true;
-  }
-
-  moveX(e.clientX);
-  moveY(e.clientY);
-});
 
