@@ -102,6 +102,7 @@ border: none !important;
 .offcanvas {
   background-color: var(--red) !important;
   height: 100vh !important;
+  transition: none !important;
 }
 
 .offcanvas-header,
@@ -113,10 +114,23 @@ border: none !important;
   justify-content: center !important;
 }
 
-/* .link-aspecto {
-  padding: 2rem 5rem 1rem 5rem;
-  border: solid !important;
-} */
+ .link-aspecto {
+  border: solid var(--black)!important;
+  margin: 0.6rem !important;
+}
+
+.link-aspecto h1 {
+   padding: 1rem 7rem 0.4rem 7rem !important;
+}
+
+.link-aspecto:hover {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+}
+
+.link-aspecto h1:hover {
+  color: var(--white) !important;
+}
 
 .offcanvas .navbar-nav .nav-link h2 {
   margin: 0.5rem 0;
@@ -154,9 +168,32 @@ border: none !important;
 .navbar-blur.navbar-on-header .navbar-toggler.custom-toggle {
   color: #000000;
 }
+
 .white{
   color: #ffffff !important;
 }  
+
+.menu-close {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+  z-index: 10;
+}
+
+.menu-close h1 {
+  margin: 0;
+  pointer-events: none; /* el click es del botón */
+}
+
+.offcanvas-brand {
+  position: absolute;
+  top: -4px;
+  left: 0rem;
+  z-index: 2;
+  text-decoration: none;
+}
 
 
 
@@ -326,6 +363,8 @@ footer {
   display: flex;
   align-items: flex-end;
   width: 100vw;
+  position: relative;
+  z-index: 1040;
 }
 
 footer div {
@@ -361,7 +400,7 @@ body.work footer {
   .offcanvas-header {
     flex-direction: column;
     height: 100vh;
-    justify-content: flex-start !important;
+    justify-content: center !important;
   }
 
   .offcanvas .navbar-nav .nav-link h5 {
@@ -369,8 +408,12 @@ body.work footer {
   }
 
   .btn-close {
-    position: absolute;
-    right: 1rem;
+    position: absolute !important;
+    right: 5rem;
+    top: 1rem;
+    color: var(--black) !important;
+    opacity: 1 !important;
+    --bs-btn-close-bg: var(--black) !important; 
   }
 
   .navbar-blur {
@@ -378,10 +421,26 @@ body.work footer {
   }
 
   .menu-blur {
-    position: absolute;
-    top: 40vh;
     text-align: center;
   }
+
+  .offcanvas .peloteo {
+    margin-top: 1rem !important;
+  }
+
+  .offcanvas-top {
+  transform: none !important;
+  }
+
+  .navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 
 }
 
