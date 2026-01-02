@@ -184,7 +184,7 @@ border: none !important;
 
 .menu-close h1 {
   margin: 0;
-  pointer-events: none; /* el click es del botón */
+  pointer-events: none; 
 }
 
 .offcanvas-brand {
@@ -275,7 +275,7 @@ body.work {
 
 body.work > header {
   flex: 1;
-  min-height: 0; /* CLAVE */
+  min-height: 0;
   display: flex;
 }
 
