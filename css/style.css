@@ -202,7 +202,6 @@ border: none !important;
   display: inline-block;
   position: relative;
   will-change: transform;
-  cursor: default;
 }
 
 
