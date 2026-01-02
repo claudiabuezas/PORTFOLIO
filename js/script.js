@@ -315,6 +315,35 @@ $(function () {
   });
 });
 
+$(".archive-card").on("click", function () {
+  window.location.href = $(this).data("link");
+});
+
+// PROJECT
+$(function () {
+
+  const preview = document.querySelector(".work-preview");
+  const img = preview.querySelector("img");
+
+  const xTo = gsap.quickTo(preview, "x", { duration: 0.35, ease: "power3" });
+  const yTo = gsap.quickTo(preview, "y", { duration: 0.35, ease: "power3" });
+
+  $(".work-menu li").on("mouseenter", function () {
+    img.src = $(this).data("img");
+    gsap.to(preview, { opacity: 1, duration: 0.2 });
+  });
+
+  $(".work-menu li").on("mouseleave", function () {
+    gsap.to(preview, { opacity: 0, duration: 0.2 });
+  });
+
+  $(window).on("mousemove", function (e) {
+    xTo(e.clientX + 20);
+    yTo(e.clientY + 20);
+  });
+
+});
+
 
 
 
