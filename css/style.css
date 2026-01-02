@@ -50,10 +50,25 @@ html {
 
 body {
     width: 100%;
+    cursor: none;
     overflow-x: hidden;
     background-color: var(--red) !important;
     color: var(--black) !important;
     font-family: var(--font-family-regular) !important;
+}
+
+.cursor-ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+
+  background: white;
+  mix-blend-mode: difference;
 }
 
 a {
@@ -74,6 +89,11 @@ h2 {
 
 /* MENU
 ---------------------------------------------------------------------------------------------------------------- */
+.peloteo {
+  font-family: var(--font-family-wide-medium) !important;
+  margin-left: 1rem !important;
+}
+
 .navbar-toggler {
 border: none !important;
 }
@@ -161,6 +181,30 @@ border: none !important;
   padding: 0;
   will-change: transform;
 }
+
+#heroLoop {
+  font-family: var(--font-family-extrawide-extrabold);
+  font-size: 90vh;
+  line-height: 0.8;
+  white-space: nowrap;
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+#heroLoop .word {
+  display: inline-flex;
+}
+
+#heroLoop span span {
+  display: inline-block;
+  position: relative;
+  will-change: transform;
+  cursor: default;
+}
+
 
 
 .hero-text {

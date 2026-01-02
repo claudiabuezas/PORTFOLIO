@@ -12,7 +12,8 @@
         <link rel="icon" type="image/x-icon" href="media/icon/favicon.ico">
     </head>
     <body>
-        <nav class="navbar navbar-expand-sm fixed-top navbar-blur justify-content-end">
+        <nav class="navbar navbar-expand-sm fixed-top navbar-blur justify-content-between">
+          <h1 class="peloteo">PELOTEO</h1>
           <div>
                 <button class="navbar-toggler custom-toggle" type="button"
                         data-bs-toggle="offcanvas"
@@ -64,9 +65,21 @@
         </nav>
         <header class="hero">
           <div class="hero-marquee">
-            <h1 id="heroLoop">PELOTEO&nbsp;PELOTEO&nbsp;PELOTEO&nbsp;PELOTEO</h1>
+            <h1 id="heroLoop" aria-label="PELOTEO PELOTEO PELOTEO PELOTEO">
+              <span class="word">
+                <span>P</span><span>E</span><span>L</span><span>O</span><span>T</span><span>E</span><span>O</span>
+              </span>&nbsp;
+              <span class="word">
+                <span>P</span><span>E</span><span>L</span><span>O</span><span>T</span><span>E</span><span>O</span>
+              </span>&nbsp;
+              <span class="word">
+                <span>P</span><span>E</span><span>L</span><span>O</span><span>T</span><span>E</span><span>O</span>
+              </span>&nbsp;
+              <span class="word">
+                <span>P</span><span>E</span><span>L</span><span>O</span><span>T</span><span>E</span><span>O</span>
+              </span>
+            </h1>
           </div>
-
           <div class="container-fluid hero-text">
             <div class="row align-items-center h-100">
               <div class="col-12 col-md-2">
@@ -97,10 +110,15 @@
             <h1>©</h1>
           </div>
         </footer>
+
+        <div class="cursor-ball"></div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/cursor.js"></script>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>
