@@ -343,6 +343,84 @@ $(function () {
 });
 
 
+$(document).ready(function () {
+
+  const isMobile = window.innerWidth <= 767;
+
+  $(document).on("click", "[data-target], [data-project]", function () {
+    const target =
+      $(this).data("target") ||
+      $(this).data("project");
+
+    if (!target) return;
+
+
+    if (isMobile) {
+      $("body").addClass("project-open");
+
+      $(".project-mobile-menu").hide();
+      $(".project-content, .project-mobile-content")
+        .empty()
+        .load(target, function () {
+          $(this).scrollTop(0);
+        });
+
+    // DESKTOP
+    } else {
+      $(".project-content")
+        .stop(true)
+        .fadeOut(200, function () {
+          $(this).load(target, function () {
+            $(this).fadeIn(200);
+          });
+        });
+    }
+  });
+
+  /* ======================
+     BOTÓN BACK (MOBILE)
+  ====================== */
+  $(document).on("click", ".project-back", function () {
+    $("body").removeClass("project-open");
+
+    $(".project-content, .project-mobile-content").empty();
+    $(".project-mobile-menu").show();
+  });
+
+});
+
+
+
+$(document).on("click", ".js-work", function (e) {
+  e.preventDefault();
+
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  const target = isMobile
+    ? "project-mobile.html"
+    : "project.html";
+
+  // Si el menú offcanvas está abierto, ciérralo primero
+  const offcanvasEl = document.querySelector(".offcanvas.show");
+
+  if (offcanvasEl) {
+    const instance = bootstrap.Offcanvas.getInstance(offcanvasEl);
+    instance.hide();
+
+    offcanvasEl.addEventListener(
+      "hidden.bs.offcanvas",
+      () => (window.location.href = target),
+      { once: true }
+    );
+  } else {
+    window.location.href = target;
+  }
+});
+
+
+
+
+
+
 
 
 

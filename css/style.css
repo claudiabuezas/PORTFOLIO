@@ -213,10 +213,6 @@ border: none !important;
   color: var(--red) !important;
 }
 
-.navbar-blur .peloteo {
-  mix-blend-mode: normal !important;
-  color: var(--red) !important;
-}
 
 
 
@@ -501,6 +497,56 @@ body.work footer {
 }
 
 
+
+
+/* MOBILE ONLY */
+@media (max-width: 767px) {
+
+  .project-layout {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .project-menu {
+    position: fixed;
+    inset: 0;
+
+    z-index: 10;
+    overflow-y: auto;
+  }
+
+  .project-content {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform .3s ease;
+  }
+
+  body.project-open .project-content {
+    transform: translateX(0);
+  }
+
+  body.project-open .project-menu {
+    display: none;
+  }
+
+  .project-back {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 30;
+    background: none;
+    border: none;
+
+    color: var(--red);
+  }
+
+  body.project-open .project-back {
+    display: block;
+  }
+}
 
 
 @media screen and (max-width: 768px) {

@@ -12,7 +12,7 @@
         <link rel="icon" type="image/x-icon" href="media/icon/favicon.ico">
     </head>
     <body class="project-body">
-        <nav class="navbar navbar-expand-md fixed-top navbar-blur justify-content-between menu-red">
+        <nav class="navbar navbar-expand-md fixed-top navbar-blur justify-content-between">
           <a href="index.html"><h1 class="peloteo">PELOTEO</h1></a>
           <div>
             <button class="navbar-toggler custom-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><span><h1>MENU</h1></span></button>
@@ -25,7 +25,7 @@
                 <div class="menu-blur">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link link-aspecto" href="work.html"><h1>WORK</h1></a>
+                    <a class="nav-link link-aspecto js-work" href="project.html"><h1>WORK</h1></a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link link-aspecto" href="archive.html"><h1>ARCHIVE</h1></a>
@@ -66,49 +66,33 @@
         <main class="project-layout row justify-content-between g-5">
 
 
-            <aside class="project-menu col-md-5">
+             <aside class="project-menu col-md-5">
                 <h4>(SELECTED WORKS)</h4>
+
                 <ul>
-                <li data-img="media/img/foto.png" class="d-flex justify-content-between">
+                    <li class="project-link d-flex justify-content-between"
+                        data-target="projects/project-01.html">
                     <div>
-                        <h5>Nombre proyecto</h5>
-                        <p>Illustration, Animation, Art Direction</p>
+                        <h5>Proyecto</h5>
+                        <p>Illustration, Animation</p>
                     </div>
                     <h4>(2024)</h4>
-                </li>
-                <li data-img="media/img/foto.png" class="d-flex justify-content-between">
+                    </li>
+
+                    <li class="project-link d-flex justify-content-between"
+                        data-target="projects/project-01.html">
                     <div>
-                        <h5>Nombre proyecto</h5>
-                        <p>Illustration, Animation, Art Direction</p>
+                        <h5>Proyecto</h5>
+                        <p>Art Direction</p>
                     </div>
-                    <h4>(2024)</h4>
-                </li>
-                <li data-img="media/img/foto.png" class="d-flex justify-content-between">
-                    <div>
-                        <h5>Nombre proyecto</h5>
-                        <p>Illustration, Animation, Art Direction</p>
-                    </div>
-                    <h4>(2024)</h4>
-                </li>
+                    <h4>(2023)</h4>
+                    </li>
                 </ul>
-            </aside>
+                </aside>
 
-            <section class="project-content col-md-7">
-                <div class="project-head">
-                    <div class="d-flex justify-content-between my-2">
-                        <h4>Nombre del proyecto</h4>
-                        <h5>(2025)</h5>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                </p>
-                </div>
+                <section class="project-content col-md-7">
 
-                <div class="project-media">
-                <img src="media/img/foto.png">
-                <img src="media/img/foto.png">
-                <img src="media/img/foto.png">
-                <img src="media/img/foto.png">
-                </div>
-            </section>
+                </section>
 
             <div class="project-preview">
                 <img src="media/img/foto.png">
@@ -126,6 +110,9 @@
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/cursor.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
     </body>
 </html>
 
