@@ -172,6 +172,11 @@ border: none !important;
   color: #000000;
 }
 
+.navbar-blur.navbar-on-header {
+  mix-blend-mode: normal;
+  color: var(--black);
+}
+
 .white{
   color: #ffffff !important;
 }  
@@ -197,6 +202,22 @@ border: none !important;
   z-index: 2;
   text-decoration: none;
 }
+
+.project-body .navbar-blur.navbar-on-header,
+.page-about .navbar-blur.navbar-on-header {
+  color: var(--red) !important;
+}
+
+.project-body h1,
+.page-about h1 {
+  color: var(--red) !important;
+}
+
+.navbar-blur .peloteo {
+  mix-blend-mode: normal !important;
+  color: var(--red) !important;
+}
+
 
 
 
