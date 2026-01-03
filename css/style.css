@@ -598,3 +598,100 @@ body.work footer {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT */
+.project-body {
+  cursor: none;
+  background-color: var(--white) !important;
+  color: var(--red) !important;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin: 1rem;
+}
+
+.about p {
+  margin-bottom: 0;
+}
+
+.about > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.about > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about > div:last-child > div:first-child {
+  max-width: 80%;
+}
+
+.about > div:last-child > div:last-child {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.about > div:last-child > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about > div:last-child > div:last-child > div:nth-child(1) {
+  margin-top: 0;
+}
+
+.about > div:last-child > div:last-child > div:nth-child(2) {
+  margin-top: 12rem;
+}
+
+.about > div:last-child > div:last-child > div:nth-child(3) {
+  margin-top: 4rem;
+}
+
+.about img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.person-info {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
