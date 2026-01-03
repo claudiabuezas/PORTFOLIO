@@ -391,30 +391,7 @@ $(document).ready(function () {
 
 
 
-$(document).on("click", ".js-work", function (e) {
-  e.preventDefault();
 
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
-  const target = isMobile
-    ? "project-mobile.html"
-    : "project.html";
-
-  // Si el menú offcanvas está abierto, ciérralo primero
-  const offcanvasEl = document.querySelector(".offcanvas.show");
-
-  if (offcanvasEl) {
-    const instance = bootstrap.Offcanvas.getInstance(offcanvasEl);
-    instance.hide();
-
-    offcanvasEl.addEventListener(
-      "hidden.bs.offcanvas",
-      () => (window.location.href = target),
-      { once: true }
-    );
-  } else {
-    window.location.href = target;
-  }
-});
 
 
 
