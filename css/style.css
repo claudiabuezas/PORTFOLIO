@@ -461,12 +461,12 @@ body.work .archive {
 
 /* FOOTER */
 footer {
-  padding: 0.5rem;
+  padding: 0rem 1rem;
   display: flex;
   align-items: flex-end;
   width: 100vw;
   position: relative;
-  z-index: 1040;
+  bottom: 0;
 }
 
 footer div {
@@ -631,6 +631,7 @@ body.work footer {
   gap: 4rem;
   align-items: start;
   margin: 1rem;
+  min-height: calc(100vh - 8rem);
 }
 
 .about p {

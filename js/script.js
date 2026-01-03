@@ -85,6 +85,7 @@ $(function () {
   });
 
 });
+
 const letters = document.querySelectorAll('#heroLoop span span');
 
 letters.forEach(letter => {
@@ -365,7 +366,6 @@ $(document).ready(function () {
           $(this).scrollTop(0);
         });
 
-    // DESKTOP
     } else {
       $(".project-content")
         .stop(true)
