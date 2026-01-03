@@ -395,7 +395,7 @@ body.work .archive {
 }
 
 .project-layout {
-  height: 100vh;
+  height: auto;
 }
 
 /* MENU FIJO */
@@ -403,7 +403,7 @@ body.work .archive {
   position: fixed;
   top: 0;
   left: 0;
-  height: calc(100vh - 3rem);
+  height: calc(100vh - 8rem);
   padding: 3rem;
 }
 
