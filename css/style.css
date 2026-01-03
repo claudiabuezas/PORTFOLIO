@@ -19,12 +19,17 @@
     font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
 }
 
-
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 :root {
@@ -530,57 +535,7 @@ body.work footer {
 
 /* MOBILE ONLY */
 @media (max-width: 767px) {
-
-  .project-layout {
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .project-menu {
-    position: fixed;
-    inset: 0;
-
-    z-index: 10;
-    overflow-y: auto;
-  }
-
-  .project-content {
-    position: fixed;
-    inset: 0;
-    z-index: 20;
-    overflow-y: auto;
-    transform: translateX(100%);
-    transition: transform .3s ease;
-  }
-
-  body.project-open .project-content {
-    transform: translateX(0);
-  }
-
-  body.project-open .project-menu {
-    display: none;
-  }
-
-  .project-back {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 30;
-    background: none;
-    border: none;
-
-    color: var(--red);
-  }
-
-  body.project-open .project-back {
-    display: block;
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-
-  .offcanvas-header {
+ .offcanvas-header {
     flex-direction: column;
     height: 100vh;
     justify-content: center !important;
@@ -616,16 +571,75 @@ body.work footer {
   }
 
   .navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler:focus-visible {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler:focus-visible {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .project-layout {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .project-menu {
+    position: fixed;
+    inset: 0;
+
+    z-index: 10;
+    overflow-y: auto;
+  }
+
+  .project-content {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    padding-left: 1rem !important;
+  }
+
+  body.project-open .project-content {
+    transform: translateX(0);
+  }
+
+  body.project-open .project-menu {
+    display: none;
+  }
+
+  .project-back {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    margin: 1rem 0 !important;
+
+    z-index: 999999;
+    pointer-events: auto;
+
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--red);
+
+    cursor: pointer;
+  }
+
+  .project-back h1{
+    text-decoration: underline;  
+  }
+
+  .project-head {
+    margin-top: 4rem;
+  }
+
 }
 
 
-}
+
 
 
 

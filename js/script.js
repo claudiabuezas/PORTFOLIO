@@ -390,12 +390,11 @@ $(document).ready(function () {
   /* ======================
      BOTÓN BACK (MOBILE)
   ====================== */
-  $(document).on("click", ".project-back", function () {
-    $("body").removeClass("project-open");
+$(document).on("click", ".project-back", function () {
+  $("body").removeClass("project-open");
+  $(".project-content").empty();
+});
 
-    $(".project-content, .project-mobile-content").empty();
-    $(".project-mobile-menu").show();
-  });
 
 });
 
