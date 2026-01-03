@@ -343,6 +343,16 @@ $(function () {
 
 });
 
+$(function () {
+  const params = new URLSearchParams(window.location.search);
+  const project = params.get("project");
+
+  if (!project) return;
+
+  $(".project-content").load(`projects/${project}.html`);
+});
+
+
 
 $(document).ready(function () {
 
