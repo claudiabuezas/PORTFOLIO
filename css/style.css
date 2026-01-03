@@ -20,6 +20,7 @@
 }
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -82,6 +83,8 @@ h1 {
 h2 {
     font-size: 1.3rem !important;
 }
+
+
 
 
 
@@ -345,64 +348,65 @@ body.work .archive {
 
 
 /* PROYECTO */
+.project-body {
+  cursor: none;
+  background-color: var(--white) !important;
+  color: var(--red) !important;
+}   
+
 .menu-red {
   color: var(--red) !important;
 }
 
 .header-invisible {
   height: 3rem;
-  background: #fff9f0;
 }
 
-.work-layout {
-  display: flex;
-  background: #fff9f0;
-  color: #EF3E24;
-  overflow: hidden;
+.project-layout {
+  height: 100vh;
 }
 
-.work-menu {
-  padding: 2rem 1rem !important;
+/* MENU FIJO */
+.project-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 3rem);
+  padding: 3rem;
 }
 
-.work-menu ul {
+.project-menu ul {
   list-style: none;
   padding: 0;
 }
 
-.work-menu li {
-  margin-bottom: 2.5rem;
+.project-menu li {
+  margin-bottom: 1rem;
   cursor: pointer;
 }
 
-.work-menu h2 {
-  font-size: 1.2rem;
-  margin: 0;
+.project-menu > h4 {
+  margin-bottom: 2rem;
 }
 
-.work-menu p {
-  font-size: 0.85rem;
-  margin: 0.2rem 0;
+.project-menu p {
+  margin-top: -3px;
 }
 
-.work-menu span {
-  font-size: 0.85rem;
-}
-
-.work-project {
-  width: auto;
-  padding: 2rem 4rem;
+.project-content {
+  padding: 6rem;
   overflow-y: auto;
+  position: absolute;
+  right: 0;
 }
 
 .project-head {
-  max-width: 520px;
-  margin-bottom: 6rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-media {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -411,22 +415,21 @@ body.work .archive {
   display: block;
 }
 
-.work-preview {
+.project-preview {
   position: fixed;
   top: 0;
   left: 0;
-  width: 280px;
-  height: 180px;
   pointer-events: none;
   opacity: 0;
   z-index: 9999;
 }
 
-.work-preview img {
-  width: 100%;
-  height: 100%;
+.project-preview img {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
+
 
 
 
