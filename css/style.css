@@ -403,7 +403,6 @@ body.work .archive {
   height: auto;
 }
 
-/* MENU FIJO */
 .project-menu {
   position: fixed;
   top: 0;
@@ -474,6 +473,10 @@ body.work .archive {
 
 .project-head > div {
   margin-bottom: 1rem;
+}
+
+.project-back {
+  display: none;
 }
 
 
@@ -615,8 +618,8 @@ body.work footer {
     top: 1rem;
     left: 1rem;
     margin: 1rem 0 !important;
-
-    z-index: 999999;
+    display: block;
+    z-index: 99;
     pointer-events: auto;
 
     background: none;
