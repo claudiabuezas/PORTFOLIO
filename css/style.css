@@ -480,12 +480,105 @@ body.work .archive {
 }
 
 
+/* ARCHIVO  */
+
+.intr {
+  margin: 1rem;
+}
+
+#P-a {
+  font-family: var(--font-family-extrawide-extrabold);
+  font-size: 25vh !important;           
+  line-height: 0.8;
+  color: var(--black) !important;
+}
+
+#intr-img {
+  margin-bottom: 2.8rem;
+  max-width: 100%;
+  height: 25vh;       
+  object-fit: cover;   
+  display: block;
+}
+
+#copyr {
+  font-size: 4rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn-exp {
+padding: 0.8rem;
+background-color: var(--red);
+color: var(--black);
+border: 3px solid var(--black);
+}
+
+.btn-exp.active {
+padding: 0.8rem;
+background-color: var(--black);
+color: var(--white);
+border: 3px solid var(--black);
+}
+
+.btn-view {
+margin: 0.5rem;
+padding: 0.8rem;
+background-color: var(--red);
+color: var(--black);
+border: 3px solid var(--black);
+}
+
+.btn-view.active{
+margin: 0.8rem;
+padding: 0.8rem;
+background-color: var(--black);
+color: var(--white);
+border: 3px solid var(--black);
+}
 
 
 
+/* img en grid  */
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem; 
+}
+
+.img-grid {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
 
+/* img arrastrables  */
+.stage {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
 
+.stage .draggable { 
+  position: absolute; 
+}
+
+img.draggable {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 220px;
+  cursor: grab;
+  user-select: none;       
+  -webkit-user-drag: none; 
+  touch-action: none;      
+}
+
+img.draggable:active {
+  cursor: grabbing;
+}
 
 
 
@@ -639,29 +732,30 @@ body.work footer {
     margin-top: 4rem;
   }
 
+  /* Archive  */
+
+  
+    /* 1) Oculta el botón EXPERIENCE VIEW */
+    #btn-archive {
+      display: none !important;
+    }
+
+    /* 2) Oculta el EXPERIENCE_VIEW completo (la stage con las imgs arrastrables) */
+    #EXPERIENCE_VIEW {
+      display: none !important;
+    }
+
+    /* 3) Fuerza que el GRID_VIEW se vea */
+    #GRID_VIEW {
+      display: flex !important; /* bootstrap .row es flex */
+    }
+
+    /* 4) Oculta la imagen del header/intro (intr-img) */
+    #intr-img {
+      display: none !important;
+    }
+  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ABOUT */
