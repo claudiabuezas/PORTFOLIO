@@ -566,20 +566,18 @@ border: 3px solid var(--black);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem; 
-}
-
-.img-grid {
   width: 100%;
-  height: 850px;
+  height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
 .stage {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
 }
 
 .stage .draggable { 
@@ -603,6 +601,8 @@ img.draggable:active {
 
 .img-wrapper {
   position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;   /* desktop */
   overflow: hidden;
 }
 
@@ -947,6 +947,18 @@ body.work footer {
   .project-media > div {
     grid-template-columns: 1fr;
   }
-  
+
+.intr .p-section {
+  height: calc(35vh - 3rem) !important;
+}
+
+  #P-a {
+  font-size: 25vh !important;        
+}
+
+.img-wrapper {
+    aspect-ratio: 1 / 1;
+  }
+
 }
 

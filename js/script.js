@@ -600,7 +600,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const H = stage.clientHeight;
     if (W < 10 || H < 10) return false; // stage aún sin tamaño
 
-    const MIN_GAP = 90;     // más grande = más separadas
+    const MIN_GAP = 120;     // más grande = más separadas
     const EDGE_PAD = 12;
     const MAX_TRIES = 900;
 
