@@ -468,11 +468,21 @@ body.work .archive {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.project-media > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .project-media img {
   width: 100%;
+  height: auto;
   display: block;
+  max-width: 100%;
 }
 
 .project-preview {
