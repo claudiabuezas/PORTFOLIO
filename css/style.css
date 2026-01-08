@@ -104,7 +104,7 @@ p {
 .navbar-blur.navbar-on-header .peloteo {
   font-family: var(--font-family-wide-medium) !important;
   margin-left: 1rem !important;
-  color: var(--black) !important;
+  color: var(--black);
 }
 
 .peloteo {
@@ -115,6 +115,10 @@ p {
 
 .navbar-toggler {
 border: none !important;
+}
+
+.redtitle {
+    color: var(--black) !important;
 }
 
 .offcanvas {
@@ -826,7 +830,7 @@ body.work footer {
 .about > div:last-child {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .about > div:last-child > div:first-child {
@@ -875,4 +879,31 @@ body.work footer {
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.person-more {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.person-more {
+  position: relative;
+  text-decoration: none;
+}
+
+.person-more::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+
+.person-more:hover::after {
+  width: 100%;
 }
