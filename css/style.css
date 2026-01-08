@@ -597,9 +597,32 @@ img.draggable:active {
   cursor: grabbing;
 }
 
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
+.img-overlay span {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
 
+.img-wrapper:hover .img-overlay {
+  opacity: 1;
+}
 
 /* FOOTER */
 footer {
