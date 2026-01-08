@@ -511,7 +511,15 @@ body.work .archive {
   color: var(--black) !important;
 }
 
-#intr-img {
+#intrCarousel {
+  min-width: 0;
+}
+
+.carousel-item {
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.intr-img {
   margin-bottom: 2.8rem;
   max-width: 100%;
   height: 55vh;       
@@ -928,7 +936,7 @@ body.work footer {
     display: flex !important;
   }
 
-  #intr-img {
+  #intrCarousel {
     display: none !important;
   }
 
