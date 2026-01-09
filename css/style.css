@@ -95,6 +95,20 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MENU
 ---------------------------------------------------------------------------------------------------------------- */
 .navbar-blur.navbar-on-header .peloteo {
@@ -249,6 +263,18 @@ border: none !important;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* HOME */
 .hero {
   position: relative;
@@ -308,6 +334,16 @@ border: none !important;
   text-align: justify;
   font-family: var(--font-family-bold);
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -385,6 +421,15 @@ body.work .archive {
   z-index: 10;
   box-shadow: 0 40px 80px rgba(0,0,0,0.35);
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -492,6 +537,16 @@ body.work .archive {
 .project-back {
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /* ARCHIVO  */
@@ -602,7 +657,7 @@ img.draggable:active {
 .img-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;   /* desktop */
+  aspect-ratio: 4 / 5;   
   overflow: hidden;
 }
 
@@ -627,6 +682,17 @@ img.draggable:active {
 .img-wrapper:hover .img-overlay {
   opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* FOOTER */
 footer {
@@ -656,6 +722,14 @@ body.work footer {
 .project-body footer h1{
   color: var(--red) !important;
 }
+
+
+
+
+
+
+
+
 
 
 /* ABOUT */
@@ -778,6 +852,21 @@ body.work footer {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MEDIAQUERIES */
 @media screen and (max-width: 1500px) {
   .archive-scene {
@@ -842,9 +931,10 @@ body.work footer {
     --bs-btn-close-bg: var(--black) !important; 
   }
 
-  .navbar-blur {
-    mix-blend-mode: normal !important;
-  }
+ body.offcanvas-open .navbar-blur {
+  mix-blend-mode: normal !important;
+  color: var(--black) !important;
+}
 
   .menu-blur {
     text-align: center;
@@ -921,7 +1011,7 @@ body.work footer {
   }
 
   .project-head {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   #btn-archive {
