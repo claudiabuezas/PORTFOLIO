@@ -96,7 +96,15 @@ p {
 
 
 
+.content-red ::selection {
+  background: var(--red);
+  color: var(--white);
+}
 
+.content-black ::selection {
+  background: var(--black);
+  color: var(--white);
+}
 
 
 
