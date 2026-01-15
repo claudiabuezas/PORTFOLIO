@@ -215,61 +215,63 @@ $(".archive-card").on("click", function () {
   window.location.href = $(this).data("link");
 });
 
+
+
 // PROJECT
-$(function () {
-  const preview = document.querySelector(".project-preview");
-  if (!preview) return;
-
-  const img = preview.querySelector("img");
-  if (!img) return;
-
-  const xTo = gsap.quickTo(preview, "x", { duration: 0.35, ease: "power3" });
-  const yTo = gsap.quickTo(preview, "y", { duration: 0.35, ease: "power3" });
-
-  $(".project-menu li").on("mouseenter", function () {
-    img.src = $(this).data("img");
-    gsap.to(preview, { opacity: 1, duration: 0.2 });
-  });
-
-  $(".project-menu li").on("mouseleave", () => {
-    gsap.to(preview, { opacity: 0, duration: 0.2 });
-  });
-
-  $(window).on("mousemove", e => {
-    xTo(e.clientX + 20);
-    yTo(e.clientY + 20);
-  });
-});
-
-
-$(function () {
-  const params = new URLSearchParams(window.location.search);
-  const project = params.get("project");
-
-  if (!project) return;
-
-  $(".project-content").load(`projects/${project}.html`);
-});
-
-
-
 $(document).ready(function () {
-
   const isMobile = window.innerWidth <= 767;
 
-  $(document).on("click", "[data-target], [data-project]", function () {
-    const target =
-      $(this).data("target") ||
-      $(this).data("project");
 
+
+  const $preview = $(".project-preview");
+  const $previewImg = $(".project-preview img");
+
+  if (!isMobile) {
+    $(".project-link").on("mouseenter", function () {
+      const imgSrc = $(this).data("img");
+      if (!imgSrc) return;
+
+      $previewImg.attr("src", imgSrc);
+
+      gsap.to($preview, {
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
+
+    $(".project-link").on("mouseleave", function () {
+      gsap.to($preview, {
+        autoAlpha: 0,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
+
+    $(document).on("mousemove", function (e) {
+      gsap.to($preview, {
+        x: e.clientX + 20,
+        y: e.clientY + 20,
+        duration: 0.2,
+        ease: "power2.out"
+      });
+    });
+  }
+
+
+  $(document).on("click touchstart", "[data-target], [data-project]", function () {
+    const target = $(this).data("target") || $(this).data("project");
     if (!target) return;
 
+    gsap.to($preview, {
+      autoAlpha: 0,
+      duration: 0.2
+    });
 
     if (isMobile) {
       $("body").addClass("project-open");
 
-      $(".project-mobile-menu").hide();
-      $(".project-content, .project-mobile-content")
+      $(".project-content")
         .empty()
         .load(target, function () {
           $(this).scrollTop(0);
@@ -289,10 +291,15 @@ $(document).ready(function () {
   $(document).on("click", ".project-back", function () {
     $("body").removeClass("project-open");
     $(".project-content").empty();
+
+    gsap.to($preview, {
+      autoAlpha: 0,
+      duration: 0.2
+    });
   });
 
-
 });
+
 
 
 // ARCHIVE 
