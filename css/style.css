@@ -942,3 +942,11 @@ body.work footer {
   
 }
 
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: default;
+  }
+  .cursor-ball {
+    display: none;
+  }
+}
