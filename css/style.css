@@ -448,6 +448,7 @@ body.work .archive {
   cursor: none;
   background-color: var(--white) !important;
   color: var(--red) !important;
+  width: 100svw;
 }   
 
 .menu-red {
