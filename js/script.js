@@ -357,13 +357,8 @@ $(function () {
 $(document).ready(function () {
 
   const isMobile = window.innerWidth <= 767;
-  const urlParams = new URLSearchParams(window.location.search);
-  const projectFromURL = urlParams.get("project");
 
   $(document).on("click", "[data-target], [data-project]", function () {
-
-    if (projectFromURL) return;
-    
     const target =
       $(this).data("target") ||
       $(this).data("project");
