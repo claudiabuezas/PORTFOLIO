@@ -220,11 +220,12 @@ $(".archive-card").on("click", function () {
 // PROJECT
 $(document).ready(function () {
   const isMobile = window.innerWidth <= 767;
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectFromURL = urlParams.get("project");
 
 
-
-  const $preview = $(".project-preview");
-  const $previewImg = $(".project-preview img");
+    const $preview = $(".project-preview");
+    const $previewImg = $(".project-preview img");
 
   if (!isMobile) {
     $(".project-link").on("mouseenter", function () {
@@ -256,7 +257,7 @@ $(document).ready(function () {
         ease: "power2.out"
       });
     });
-  }
+  });
 
 
   $(document).on("click touchstart", "[data-target], [data-project]", function () {
