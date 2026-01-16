@@ -974,10 +974,10 @@ body.work footer {
     --bs-btn-close-bg: var(--black) !important; 
   }
 
- body.offcanvas-open .navbar-blur {
-  mix-blend-mode: normal !important;
-  color: var(--black) !important;
-}
+  body.offcanvas-open .navbar-blur {
+    mix-blend-mode: normal !important;
+    color: var(--black) !important;
+  }
 
   .menu-blur {
     text-align: center;
@@ -1008,12 +1008,14 @@ body.work footer {
   .project-menu {
     position: fixed;
     inset: 0;
-
+    box-sizing: border-box;
     z-index: 10;
     overflow-y: auto;
+    padding: 2rem 1rem !important;
   }
+  
 
-    .project-preview {
+  .project-preview {
     display: none !important;
   }
 
@@ -1029,10 +1031,9 @@ body.work footer {
     backface-visibility: hidden;  
   }
 
-  .project-menu {
-    box-sizing: border-box;
+  .project-link > h4 {
+    padding-right: 0 !important;
   }
-
 
   body:not(.project-open) .project-content {
     pointer-events: none;
