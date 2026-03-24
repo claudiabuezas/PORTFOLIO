@@ -318,6 +318,9 @@ $(".archive-card").on("click", function () {
   window.location.href = $(this).data("link");
 });
 
+
+
+
 // PROJECT
 $(function () {
 
@@ -387,9 +390,6 @@ $(document).ready(function () {
     }
   });
 
-  /* ======================
-     BOTÓN BACK (MOBILE)
-  ====================== */
   $(document).on("click", ".project-back", function () {
     $("body").removeClass("project-open");
     $(".project-content").empty();
