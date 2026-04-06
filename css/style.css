@@ -775,7 +775,7 @@ body.work footer {
 .about > div:last-child {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .about > div:last-child > div:first-child {
@@ -808,8 +808,8 @@ body.work footer {
 }
 
 .about img {
-  width: 100%;
-  height: auto;
+  width: fit-content;
+  height: 41vh;
   display: block;
 }
 
@@ -827,7 +827,6 @@ body.work footer {
 }
 
 .person-more {
-  display: inline-block;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
@@ -836,21 +835,6 @@ body.work footer {
 .person-more {
   position: relative;
   text-decoration: none;
-}
-
-.person-more::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background: currentColor;
-  transition: width 0.25s ease;
-}
-
-.person-more:hover::after {
-  width: 100%;
 }
 
 .derechos {
@@ -918,8 +902,9 @@ body.work footer {
   }
 
   .about img {
-    width: 100%;
-    height: auto;
+    width: fit-content;
+    height: 50vh;
+    margin-top: 1rem;
     display: block;
   }
   .archive-scene {
@@ -1114,6 +1099,12 @@ body.work footer {
 
   .footer-title {
   display: none;
+  }
+
+  .about img {
+    max-width: 500px;
+    height: auto;
+    display: block;
   }
 
 }
